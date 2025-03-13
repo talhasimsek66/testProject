@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello CSE 220</title>
-</head>
-<body>
-    <ul>
-        <li>URLs, Request/Response</li>
-        <li>HTML Templates</li>
-        <li>CSS, Javascript</li>
-        <li>Models, Views</li>
+{% extends "base.html" %}
 
-        <p>
+{% block title %}My amazing HelloTest{% endblock %}
+
+{% block content %}
+    <p>
         Here is the META information around your request:
-             <ul>
-            {% for k,v in request.items %}
-                <li>{{ k }} is {{ v }}</li>
-            {% endfor %}
-            </ul>>
-         </p>
-
+    <ul>
+        {% for k,v in request.items %}
+            <li><b>{{ k }}</b> : {{ v }}</li>
+        {% endfor %}
     </ul>
-</body>
-</html>
+    </p>
+{% endblock %}
+
+

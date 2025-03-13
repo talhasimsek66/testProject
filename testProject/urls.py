@@ -20,6 +20,6 @@ from testProject import views
 
 urlpatterns = [
     path('', views.index), #Request, URL
-    path('hello/', views.hello),
+    path('hello/<str:category>/<int:id>', views.hello),
     path('admin/', admin.site.urls),
 ]
