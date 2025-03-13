@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello CSE 220</title>
+</head>
+<body>
+    <ul>
+        <li>URLs, Request/Response</li>
+        <li>HTML Templates</li>
+        <li>CSS, Javascript</li>
+        <li>Models, Views</li>
+
+        <p>
+        Here is the META information around your request:
+             <ul>
+            {% for k,v in request.items %}
+                <li>{{ k }} is {{ v }}</li>
+            {% endfor %}
+            </ul>>
+         </p>
+
+    </ul>
+</body>
+</html>
