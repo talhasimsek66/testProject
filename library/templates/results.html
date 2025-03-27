@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Search Results</h1>
+    {% for publisher in publishers %}
+        {% if publisher.name %}
+            <h2>{{ publisher.name }}</h2>
+        {% endif %}
+    {% empty %}
+        <li>Sorry, no publishers.</li>
+    {% endfor %}
+{% endblock %}

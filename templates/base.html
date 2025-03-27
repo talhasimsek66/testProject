@@ -42,14 +42,17 @@
 <body>
     <div class="sidenav">
         <ul>
-            <li><a href="/hello/apparel/911">Hello Test</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/library">Library</a></li>
             <li><a href="/admin/">Admin</a></li>
         </ul>
     </div>
 
     <div id="content">
-        {% block content %}This is going to be replaced by the child templates.
-        I am just here as a placeholder. {% endblock %}
+        {% block content %}
+            This is going to be replaced by the child templates.
+            I am just here as a placeholder.
+        {% endblock %}
     </div>
 </body>
 </html>
