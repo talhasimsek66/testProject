@@ -1,8 +1,6 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
 
-from app1.models import M
-
 def index(request):
     return render(request, "base.html")
 
