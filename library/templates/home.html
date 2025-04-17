@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="search/">
-        <label>Type publisher to search:</label><br>
-        <input type="text" id="name" name="name" value=""><br><br>
+    {#    <form action="search/">#}
+    {#        <label class="form-label">Type publisher to search:</label><br>#}
+    {#        <input class="form-control" type="text" id="name" name="name" value=""><br><br>#}
+    {#        <button type="submit" class="btn btn-primary">Submit</button>#}
+    {#    </form>#}
+
+    <form action="save/" method="post">
+        {% csrf_token %}
+        {{ form }}
         <input type="submit" value="Submit">
     </form>
 {% endblock %}

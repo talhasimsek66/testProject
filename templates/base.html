@@ -2,57 +2,59 @@
 <html lang="en">
 <head>
     <title>{% block title %}My amazing site{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
 
-<style>
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
 
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: black;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+        #content {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            font-size: 28px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
 
-#content {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-</style>
+    </style>
 
 </head>
 
 <body>
-    <div class="sidenav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/library">Library</a></li>
-            <li><a href="/admin/">Admin</a></li>
-        </ul>
-    </div>
+<div class="sidenav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/library">Library</a></li>
+        <li><a href="/admin/">Admin</a></li>
+    </ul>
+</div>
 
-    <div id="content">
-        {% block content %}
-            This is going to be replaced by the child templates.
-            I am just here as a placeholder.
-        {% endblock %}
-    </div>
+<div id="content">
+    {% block content %}
+        This is going to be replaced by the child templates.
+        I am just here as a placeholder.
+    {% endblock %}
+</div>
 </body>
 </html>

@@ -4,6 +4,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, "base.html")
 
+def thankyou(request):
+    return render(request, "thanks.html")
+
 def hello(request, category, id):
     if category == 'funky':
         raise Http404("Sorry !")
