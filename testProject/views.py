@@ -1,9 +1,6 @@
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import Http404
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
-
-from app1.models import M
-
 
 @cache_page(60)
 def index(request):
