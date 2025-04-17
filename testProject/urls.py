@@ -19,7 +19,6 @@ from django.urls import path
 from testProject import views
 
 urlpatterns = [
-    path('', views.index), #Request, URL
-    path('hello/<str:category>/<int:id>', views.hello),
-    path('admin/', admin.site.urls),
+    path('', views.home), #Request, URL
+    path('<str:category>/<int:id>', views.testview),
 ]
