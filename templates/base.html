@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}My amazing site{% endblock %}</title>
+    <title>A simple LLM application</title>
 </head>
 
 <body>
-    <div id="sidebar">
-        {% block sidebar %}
-        <ul>
-            <li><a href="/category/0">Test View</a></li>
-        </ul>
-        {% endblock %}
-    </div>
-
-    <div id="content">
-        {% block content %}This is going to be replaced by the child templates.
-        I am just here as a placeholder. {% endblock %}
-    </div>
+<div id="content">
+    {% block content %}
+        <h1>Enter a Country Name</h1>
+        <form action="/ollama" method="GET">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="e.g. Türkiye" required>
+            <button type="submit">Submit</button>
+        </form>
+    {% endblock %}
+</div>
 </body>
 </html>

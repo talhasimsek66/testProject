@@ -16,6 +16,15 @@ services:
       - "6379:6379"
     command: redis-server --save 20 1 --loglevel warning
 
+  ollama:
+    image: ollama/ollama
+    container_name: ollama-web
+    ports:
+      - "911:911"
+    volumes:
+      - ollama:/root/.ollama
+      - ./ollama:/ollama
+
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -27,4 +36,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - ollama
       - redis
+
+volumes:
+  ollama:

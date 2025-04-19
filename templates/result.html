@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A simple LLM application</title>
+</head>
+
+<body>
+<div id="content">
+    {% block content %}
+        <h1>Aha, the capital city of {{ country }}:</h1>
+        <p>{{ response }}</p>
+        <br><a href="/">Hit me one more time !</a>
+    {% endblock %}
+</div>
+</body>
+</html>

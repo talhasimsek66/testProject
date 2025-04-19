@@ -20,5 +20,5 @@ from testProject import views
 
 urlpatterns = [
     path('', views.home), #Request, URL
-    path('<str:category>/<int:id>', views.testview),
+    path('ollama/', views.chat),
 ]
