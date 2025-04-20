@@ -1,5 +1,5 @@
 #!/bin/sh
-model=gemma3:1b
-export OLLAMA_HOST=0.0.0.0:911
+export model=gemma3:1b
+export OLLAMA_HOST=0.0.0.0:11434
 ollama start &
 ollama run $model

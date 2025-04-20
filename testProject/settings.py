@@ -93,6 +93,11 @@ DATABASES = {
     }
 }
 
+OLLAMA = {
+    'LOCATION': "http://ollama:11434", #+ os.environ.get('OLLAMA_PORT'),
+    'MODEL': 'gemma3:1b',
+}
+
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
